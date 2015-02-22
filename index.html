@@ -2,8 +2,14 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8"/>
-	<meta description="Esta pagina web es de practica"/>
+	<meta name="description" content="Esta pagina web es de practica"/>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
 	<title>Puls2014</title>
+	<!--link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'-->
+	<link rel="stylesheet" href="normalize.css"/>
+	<link rel="stylesheet" href="estilos.css"/>
+	<script src="prefixfree.min.js"></script>
+	<script src="modernizr.js"></script>
 </head>
 <body>
 	<header>
@@ -17,25 +23,38 @@
 	</header>
 	<nav>
 		<ul>
+			<li><a href="#">Home</a></li>
 			<li><a href="#">Python</a></li>
 			<li><a href="#">HTML5</a></li>
 			<li><a href="#">JavaScript</a></li>
 			<li><a href="#">CSS3</a></li>
 			<li><a href="#">Django</a></li>
 			<li id="publicar_nav">
-				<a href="#">Publicar</a>
+				<a href="#" class="icon-pen" id="mostrar-form">Publicar</a>
 			</li>
 		</ul>
 	</nav>
+	<form action="" id="formulario">			
+			<input type="text" id="titulo" placeholder="Titúlo" onkeydown="oye()" required>			
+			<input type="url" id="url" placeholder="Url" required>
+			<input type="submit" value="Agregar">
+	</form>
+	<aside>
+		<video width="320" height="240" controls>
+			<source src="movie.mp4" type="video/mp4">
+			<source src="movie.ogg" type="video/ogg">
+			Your browser does not support the video tag.
+		</video>
+	</aside>
 	<section id="contenido">
 		<article class="item">
 			<figure class="imagen_item">
 				<img src="imagen.jpg" alt=""/>
 			</figure>
 			<h2 class="titulo_item">
-				<a href="#">Título del artículo</a>
+				<a href="#">Crea tu propio framework CSS con Stylus</a>
 			</h2>
-			<div class="autor_item"><a href="#">por Juan Lopez</a>
+			<div class="autor_item">por <a href="#">Juan Lopez</a>
 			</div>
 			<div class="datos_item">
 				<a class="tag_item" href="#">Pony</a>
@@ -44,17 +63,90 @@
 				</span>				
 			</div>
 			<div class="votacion">
-				<a href="#" class="up"></a>
+				<a href="#" class="up icon-arrow-up"></a>
 				720
-				<a href="#" class="down"></a>
+				<a href="#" class="down icon-arrow-down"></a>
+				<a href="#" class="comentarios_item">98</a>
+				<a href="#" class="guardar_item icon-star-full"></a>
+			</div>
+		</article>
+		<article class="item">
+			<figure class="imagen_item">
+				<img src="imagen.jpg" alt=""/>
+			</figure>
+			<h2 class="titulo_item">
+				<a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus illo saepe fugit doloremque sed cumque dignissimos soluta, qui quod temporibus eius explicabo quas autem id natus aut, maxime tempore voluptates?</a>
+			</h2>
+			<div class="autor_item">por <a href="#">Juan Lopez</a>
+			</div>
+			<div class="datos_item">
+				<a class="tag_item" href="#">Pony</a>
+				<span class="fecha_item">
+				hace <strong>5</strong> mins
+				</span>				
+			</div>
+			<div class="votacion">
+				<a href="#" class="up icon-arrow-up"></a>
+				720
+				<a href="#" class="down icon-arrow-down"></a>
+				<a href="#" class="comentarios_item">41</a>
+				<a href="#" class="guardar_item icon-star-full"></a>
+			</div>
+		</article>
+		<article class="item">
+			<figure class="imagen_item">
+				<img src="imagen.jpg" alt=""/>
+			</figure>
+			<h2 class="titulo_item">
+				<a href="#">Automatización de tareas de frontend usando Gulp.js</a>
+			</h2>
+			<div class="autor_item">por <a href="#">Juan Lopez</a>
+			</div>
+			<div class="datos_item">
+				<a class="tag_item" href="#">Pony</a>
+				<span class="fecha_item">
+				hace <strong>5</strong> mins
+				</span>				
+			</div>
+			<div class="votacion">
+				<a href="#" class="up icon-arrow-up"></a>
+				720
+				<a href="#" class="down icon-arrow-down"></a>
+				<a href="#" class="comentarios_item">58</a>
+				<a href="#" class="guardar_item icon-star-full"></a>
+			</div>
+		</article>
+		<article class="item">
+			<figure class="imagen_item">
+				<img src="imagen.jpg" alt=""/>
+			</figure>
+			<h2 class="titulo_item">
+				<a href="#">Impulsa tu sitio en Google con estos 10 tips SEO</a>
+			</h2>
+			<div class="autor_item">por <a href="#">Juan Lopez</a>
+			</div>
+			<div class="datos_item">
+				<a class="tag_item" href="#">Pony</a>
+				<span class="fecha_item">
+				hace <strong>5</strong> mins
+				</span>				
+			</div>
+			<div class="votacion">
+				<a href="#" class="up icon-arrow-up"></a>
+				720
+				<a href="#" class="down icon-arrow-down"></a>
 				<a href="#" class="comentarios_item">69</a>
-				<a href="#" class="guardar_item"></a>
+				<a href="#" class="guardar_item icon-star-full"></a>
 			</div>
 		</article>
 	</section>
 	<footer>
 		<p><strong>Power by Armando</strong></p>
-		<p>Mejorando.la 2004</p>
+		<p>Mejorando.la 2004</p>		
 	</footer>
+	<script src="jquery-2.1.3.js">
+	</script>
+	<script src="formulario.js">
+	</script>
 </body>
 </html>
