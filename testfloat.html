@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.contenido{
+			border: 1px solid black;
+		}
+		.item{
+			border: 1px solid red;
+			background: pink;
+			width: 50%;
+			overflow: hidden;
+		}
+		.imagen_item{
+			
+		}
+		.imagen_item img{			
+			float: left;
+			width: 96px;
+		}
+		.titulo_item{
+			background: yellow;
+			text-align: center;
+			font-size: 14;
+		}
+		.autor_item{
+			background: gray;
+			
+		}
+		.datos_item{
+			background: green;
+		}
+		.datos_item .fecha_item{
+			margin-top: 20px;
+		}
+		.votacion{
+			background: orange;
+			/*top: 100%;*/
+		}
+		.comentarios_item, .guardar_item{
+			/*float: right;*/
+		}
+		@media screen and (min-width: 400px){
+			.imagen_item, .titulo_item, .autor_item, .datos_item, .datos_item,
+			 .votacion{
+				background: orange;
+				display: block;
+			}
+		}
+	</style>
+</head>
+<body>
+<section class="contenido">
+	<article class="item">
+		
+		<figure class="imagen_item">
+			<img src="imagen.jpg" alt="">
+		</figure>
+		<h2 class="titulo_item">
+			<a href="#">titulo del articulo</a>
+		</h2>
+		<div class="autor_item">por
+			<a href="#">@Jocarmando</a>
+		</div>
+		<div class="datos_item">
+			<a href="#" class="tag_item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam ab rem earum possimus quia quam unde minus cum sunt ducimus, natus omnis doloribus, mollitia similique aspernatur atque, officia adipisci. Asperiores?</a>
+			<div class="fecha_item">hace	<strong>5</strong>	 minutos</div>
+		</div>
+		<div class="votacion">
+			<a href="#" class="up">U</a>
+			<a href="#" class="down">D</a>
+			<a href="#" class="comentarios_item">20</a>
+			<a href="#" class="guardar_item">X</a>
+		</div>
+	</article>
+</section>
+</body>
+</html>
