@@ -4,6 +4,7 @@ var $form = $('#formulario'),
 	$button = $('#mostrar-form'),
 	$list = $('#contenido'),
 	$post = $('.item').first();
+
 if(localStorage.getItem('autosave')){
 	$titulo.val(sessionStorage.getItem('titulo'));
 	$url.val(sessionStorage.getItem('url'));
@@ -19,10 +20,11 @@ function mostrarFormulario(){
 	return false;
 }
 function agregarPost(){
-	var url = $url.val(),
-		titulo = $titulo.val(),
+	console.log("url:"+$url.val()+", titulo:"+$titulo.val());
+	var titulo = $titulo.val(),
+		url = $url.val(),
 		$clone = $post.clone();
-
+		
 	$clone.find('.titulo_item a')
 		.text(titulo)
 		.attr('href', url);
